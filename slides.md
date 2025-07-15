@@ -1,9 +1,6 @@
 ---
 # You can also start simply with 'default'
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+theme: dracula
 # some information about your slides (markdown enabled)
 title: React Fundamentals
 info: |
@@ -32,6 +29,8 @@ Time: 0–2 min
 Welcome everyone. Introduce the session focus: React fundamentals and component structure. We'll explore why React exists, its core architecture, and practical component patterns used in real-world development.
 -->
 
+---
+layout: cover
 ---
 
 ## 🚀 Introduction to React

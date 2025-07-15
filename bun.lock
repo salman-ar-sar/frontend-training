@@ -7,6 +7,7 @@
         "@slidev/cli": "^52.0.0",
         "@slidev/theme-default": "latest",
         "@slidev/theme-seriph": "latest",
+        "slidev-theme-dracula": "^0.2.0",
         "vue": "^3.5.17",
       },
     },
@@ -1136,6 +1137,8 @@
 
     "sisteransi": ["sisteransi@1.0.5", "", {}, "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="],
 
+    "slidev-theme-dracula": ["slidev-theme-dracula@0.2.0", "", { "dependencies": { "@slidev/types": "^0.42.5", "codemirror-theme-vars": "^0.1.2", "prism-theme-vars": "^0.2.4", "theme-vitesse": "^0.7.2" } }, "sha512-ndMD27+gUNYt9aXrb4/0vSBHKP007mpD2eCJppzhqXDG1DmN0Q6I6iFz+QvIjOPDKzzPjoYZbsWp6lPLJjgs9g=="],
+
     "source-map-js": ["source-map-js@1.2.1", "", {}, "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="],
 
     "space-separated-tokens": ["space-separated-tokens@2.0.2", "", {}, "sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q=="],
@@ -1163,6 +1166,8 @@
     "stylis": ["stylis@4.3.6", "", {}, "sha512-yQ3rwFWRfwNUY7H5vpU0wfdkNSnvnJinhF9830Swlaxl03zsOjCfmX0ugac+3LtK0lYSgwL/KXc8oYL3mG4YFQ=="],
 
     "super-regex": ["super-regex@0.2.0", "", { "dependencies": { "clone-regexp": "^3.0.0", "function-timeout": "^0.1.0", "time-span": "^5.1.0" } }, "sha512-WZzIx3rC1CvbMDloLsVw0lkZVKJWbrkJ0k1ghKFmcnPrW1+jWbgTkTEWVtD9lMdmI4jZEz40+naBxl1dCUhXXw=="],
+
+    "theme-vitesse": ["theme-vitesse@0.7.9", "", {}, "sha512-wgxHWOIEcIBp/5MAdO8Z5c0vdKy5J5008Kqt/uOYruel9oJ4TrvH3qXgCsatp4ImROd1UWsIgQ3C0R8db38qgA=="],
 
     "time-span": ["time-span@5.1.0", "", { "dependencies": { "convert-hrtime": "^5.0.0" } }, "sha512-75voc/9G4rDIJleOo4jPvN4/YC4GRZrY8yy1uU4lwrB3XEQbWve8zXoO5No4eFrGcTAMYyoY67p8jRQdtA1HbA=="],
 
@@ -1353,6 +1358,8 @@
     "nypm/tinyexec": ["tinyexec@0.3.2", "", {}, "sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA=="],
 
     "popmotion/tslib": ["tslib@2.4.0", "", {}, "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="],
+
+    "slidev-theme-dracula/@slidev/types": ["@slidev/types@0.42.11", "", {}, "sha512-K7+UWzEQpUe3eEFs7ktm3tw17Ke9ZOJPTy7yGSlZfWl4jCTf9Z0HNKECPLQ3JGL6EkJ4Wyy1y0HE92/20cTn0Q=="],
 
     "strip-literal/js-tokens": ["js-tokens@9.0.1", "", {}, "sha512-mxa9E9ITFOt0ban3j6L5MpjwegGz6lBQmM1IJkWeBZGcMxto50+eWdjC/52xDbS2vy0k7vIMK0Fe2wfL9OQSpQ=="],
 
