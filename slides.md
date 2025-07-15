@@ -5,9 +5,9 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Frontend Foundations
+title: React Fundamentals
 info: |
-  ## Fundamentals of Frontend
+  ## Intro to React
   Freshers Training Program
 
 # apply unocss classes to the current slide
@@ -19,169 +19,138 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-layout: center
-slideNumber: true
 ---
 
-# Foundation
+# React Fundamentals
 
-### Fundamentals of Frontend
-
-#### HTML · CSS · JavaScript
+### Building Modern UIs
 
 ##### Freshers Training Program
 
----
-
-## 🧭 Welcome & Agenda
-
-- Introductions & icebreaker: share your favorite webpage  
-- What we’ll cover:  
-  1. Origins & purposes of HTML/CSS/JS  
-  2. Core syntax and structure  
-  3. Interactive demo + best practices  
-  4. Next steps & resources
+<!--
+Time: 0–2 min  
+Welcome everyone. Introduce the session focus: React fundamentals and component structure. We'll explore why React exists, its core architecture, and practical component patterns used in real-world development.
+-->
 
 ---
 
-## Why HTML Was Created
+## 🚀 Introduction to React
 
-- Invented by Tim Berners‑Lee at CERN (~1991)  
-- Designed to share linked documents across institutions  
-- Hypertext + markup made publishing simple and universal
+- Why React was created  
+- What React is & how it works
 
----
-
-## 🎨 HTML Basics + Semantics
-
-- Tags: `<head>`, `<body>`, headings, lists, images, links  
-- Semantic HTML = accessibility + SEO  
-- **Quiz**: What’s the correct tag for a navigation menu?
+<!--
+Time: 2–4 min  
+Introduce React by explaining its relevance in modern web development. Explain this session will cover its origins, how it works under the hood, and practical organization strategies.
+-->
 
 ---
 
-## Understanding the DOM
+## Why React Was Created
 
-- Browser builds a DOM tree from HTML  
-- Enables JS to target and manipulate elements  
-- **Interactive**: Inspect elements using DevTools
+- Built at Facebook around 2011  
+- To improve maintainability & performance  
+- Addressing imperative DOM pain
 
----
-
-## Why CSS Was Introduced
-
-- Proposed by Håkon Wium Lie in 1994  
-- Replaced HTML hacks like `<font>` and `<blink>`  
-- Separated content (HTML) from presentation (CSS)
+<!--
+Time: 4–7 min  
+React was created by Facebook’s Jordan Walke to solve problems in their large applications like News Feed. Traditional DOM manipulation was becoming too complex and error-prone. React introduced a declarative approach, allowing developers to describe what the UI should look like, not how to change it. It also allowed breaking down interfaces into small reusable pieces.
+-->
 
 ---
 
-## CSS Syntax & Box Model
+## What React Is & How It Works
 
-- Selectors: element, class, ID  
-- Box‑model: margin ▪ border ▪ padding ▪ content  
+- Declarative, component-based UI library  
+- Uses JSX syntax  
+- Virtual DOM & reconciliation strategy
 
-```css
-.box {
-  box-sizing: border-box;
-  margin: 10px;
-  padding: 8px;
-  border: 1px solid #333;
+<!--
+Time: 7–10 min  
+React allows you to build user interfaces declaratively, meaning you describe the UI and React takes care of updating it efficiently. JSX blends HTML and JavaScript for clearer syntax. React creates a Virtual DOM, compares differences with previous renders, and only updates necessary parts in the real DOM—leading to better performance.
+-->
+
+---
+
+## 🗂 Recommended Folder Layout
+
+```shell
+src/
+├─ components/
+├─ pages/
+├─ hooks/
+├─ services/
+└─ App.jsx
+
+```
+
+- Components: reusable UI bits  
+- Pages: route-level screens  
+- Hooks: shared logic  
+- Services: API & business logic
+
+<!--
+Time: 10–14 min  
+A clean folder structure helps keep large codebases maintainable. Components are small UI elements, Pages are route-based views, Hooks encapsulate logic, and Services handle APIs or utilities. This structure scales well, avoids deeply nested files, and promotes clarity.
+-->
+
+---
+
+## 🧩 Functional Components
+
+```jsx
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
 }
 ```
 
----
+- State & effects via Hooks
+- Simple, testable, reusable
 
-## Layout Techniques
-
-- Normal flow, floats (legacy), Flexbox & Grid  
-
-```css
-.container {
-  display: flex;
-  gap: 10px;
-}
-```
-
-- **Quiz**: Which layout fits a 2‑column responsive design?
+<!--
+Time: 14–18 min  
+Since React 16.8, function components are the standard. They're simpler to write, easier to test, and support Hooks for adding state and side effects. The example shows a basic function component rendering dynamic content.
+-->
 
 ---
 
-## Responsive Design
+## 🔁 Smart vs Dumb Components
 
-- Media queries, fluid images, mobile-first  
+- **Smart**: state, data fetching, logic
+- **Dumb**: UI, props-driven, stateless
+- Example: `UserListContainer` vs `UserCard`
 
-```css
-@media (max-width: 600px) {
-  .container { flex-direction: column; }
-}
-```
-
----
-
-## Why JavaScript Was Created
-
-- Created by Brendan Eich in ~May 1995  
-- Added interactivity to static HTML pages  
-- Designed as a “language for the masses”
+<!--
+Time: 18–22 min  
+Smart components manage logic and state (e.g., data fetching), while dumb components just display UI based on props. This separation makes code modular and easier to test. Containers handle logic, presentational components handle styling and display.
+-->
 
 ---
 
-## JavaScript Core Concepts
+## ✅ Summary
 
-- Variables, data types, functions, control flow, DOM methods  
+- Component-based architecture
+- JSX & Virtual DOM
+- Hooks for logic
+- Clear folder structure
+- Smart vs dumb improves modularity
 
-```js
-const btn = document.getElementById('myBtn');
-btn.addEventListener('click', () => {
-  document.body.style.background =
-    '#' + Math.floor(Math.random()*16777215).toString(16);
-});
-```
-
----
-
-## Browser & Event Loop
-
-- JS runs in engines like V8 and SpiderMonkey  
-- Event loop handles asynchronous callbacks  
-- Tip: use `console.log`, breakpoints & the Profiler tab
+<!--
+Time: 22–24 min  
+Summarize main takeaways: React promotes modularity through components, improves clarity with JSX, enhances performance with Virtual DOM, and encourages scalability with smart organization. The smart/dumb pattern ensures maintainable code.
+-->
 
 ---
 
-## Integrating HTML · CSS · JS
+## 📚 Next Steps
 
-- Input → JS validation → CSS feedback  
+- Explore react.dev Learn & API guides
+- Try the Tic-Tac-Toe tutorial
+- Build a simple dashboard
+- Use ESLint & Prettier
+- Q\&A
 
-```js
-const input = document.querySelector('input');
-input.addEventListener('input', () => {
-  input.classList.toggle('error', input.value.length < 3);
-});
-```
-
----
-
-## Best Practices 🧹
-
-- Semantic, accessible HTML  
-- DRY, modular CSS  
-- JS: use `const`/`let`, avoid globals  
-- Tools: ESLint, Prettier, code reviews
-
----
-
-## Tools & Starter Setup
-
-- VS Code + Prettier + ESLint  
-- Chrome/Firefox DevTools  
-- Use Slidev’s dev server for live editing
-
----
-
-## Resources & Next Steps
-
-- **Learn**: MDN, freeCodeCamp, JavaScript.info  
-- **Build**: an interactive project (e.g., to-do list)  
-- **Workshop**: live pair-coding session next week  
-- **Q&A**: What are you most excited to build?
+<!--
+Time: 24–26 min  
+Encourage learners to go deeper via React.dev’s official guides. Suggest the Tic-Tac-Toe tutorial, creating a mini-project, and adding code quality tools like ESLint and Prettier. Open the floor for questions to wrap up.
+-->
